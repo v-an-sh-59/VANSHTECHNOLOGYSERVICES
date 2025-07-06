@@ -1,0 +1,105 @@
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Body Styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  header {
+    background: linear-gradient(to right, #007bff, #6610f2);
+    color: white;
+    text-shadow: 1px 1px 2px #000;
+  }
+  
+  /* Section Titles */
+  section h2 {
+    font-weight: bold;
+    color: #222;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  section h2::after {
+    content: '';
+    width: 60%;
+    height: 3px;
+    background: #007bff;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 2px;
+  }
+  
+  /* Cards and Highlights */
+  .bg-white {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .bg-white:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer Styling */
+  footer {
+    background: #1a1a1a;
+    color: #aaa;
+  }
+  footer h5,
+  footer h4 {
+    color: #00d9ff;
+  }
+  footer a {
+    transition: color 0.3s ease;
+  }
+  footer a:hover {
+    color: #fff;
+  }
+  
+  /* Badges */
+  .badge {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+  
+  /* Button Styling */
+  .btn-outline-primary {
+    border-radius: 25px;
+    padding: 10px 24px;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Testimonial Cards */
+  .card {
+    border: none;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+  }
+  
+  /* Responsive Fix */
+  @media (max-width: 768px) {
+    section h2::after {
+      width: 40%;
+    }
+  }
+  

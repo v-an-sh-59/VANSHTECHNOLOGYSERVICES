@@ -1,0 +1,92 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #000428, #004e92);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-section {
+  padding: 80px 20px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.contact-box {
+  display: block;
+  background: #ffffff10;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 30px 20px;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid #ffffff20;
+  text-align: center;
+}
+
+.contact-box:hover {
+  background: #ffffff20;
+  transform: translateY(-6px);
+}
+
+.contact-box i {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.glass-form {
+  background: #ffffff10;
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin-top: 40px;
+}
+
+.glass-form h4 {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.form-control,
+textarea {
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #000;
+}
+
+.btn-primary {
+  background: #00c6ff;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #0072ff;
+  transform: scale(1.05);
+}
+
+footer {
+  background: #000000cc;
+  padding: 20px 10px;
+  text-align: center;
+  color: #ccc;
+  font-size: 14px;
+}
+
+footer a {
+  color: #00c6ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

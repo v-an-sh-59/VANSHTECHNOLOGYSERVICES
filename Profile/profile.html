@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>User Profile | VANSH TECHNOLOGY SERVICES</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+  <style>
+    body { font-family: 'Poppins', sans-serif; background-color: #f9f9f9; }
+    .profile-header { background: linear-gradient(to right, #004e92, #000428); color: #fff; padding: 40px 0; text-align: center; }
+    .profile-card { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .profile-img { width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 4px solid #fff; margin-top: -60px; }
+    .dark-mode { background-color: #111; color: #f1f1f1; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="../index.html">VANSH TECHNOLOGY SERVICES</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#pdfs" class="nav-link">PDFs</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Profile Header -->
+<section class="profile-header">
+  <h2 class="fw-bold">👤 User Profile</h2>
+  <p>Manage your identity and visibility on VANSH TECHNOLOGY SERVICES</p>
+</section>
+
+<!-- Main Profile Container -->
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+
+      <div class="profile-card text-center">
+        <img src="https://via.placeholder.com/120" class="profile-img mb-3" alt="Profile Photo"/>
+
+        <h4 class="fw-bold mb-1">Vijay Prakash</h4>
+        <p class="text-muted">📧 vijay@example.com | 📱 +91 9876543210</p>
+        
+        <div class="mb-3">
+          <label class="form-label">User Type:</label>
+          <select class="form-select w-auto d-inline-block">
+            <option>Student</option>
+            <option>Freelancer</option>
+            <option>Teacher/Trainer</option>
+            <option>Client/Buyer</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Skills:</label>
+          <input type="text" class="form-control" placeholder="Java, Web Design, DSA, Communication"/>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Bio:</label>
+          <textarea class="form-control" rows="3" placeholder="Tell us about your goals, achievements, services..."></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Upload Resume / PPT:</label>
+          <input type="file" class="form-control"/>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-4">
+          <button class="btn btn-outline-success"><i class="bi bi-check-circle"></i> Save</button>
+          <button class="btn btn-outline-danger"><i class="bi bi-x-circle"></i> Delete</button>
+          <button class="btn btn-outline-primary"><i class="bi bi-share-fill"></i> Share</button>
+          <button class="btn btn-dark" onclick="toggleMode()">🌓 Mode</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 VANSH TECHNOLOGY SERVICES</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  function toggleMode() {
+    document.body.classList.toggle('dark-mode');
+  }
+</script>
+
+</body>
+</html>

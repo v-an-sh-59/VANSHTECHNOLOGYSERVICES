@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact & Team | VANSH TECHNOLOGY SERVICES</title>
+  <!-- CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    body { font-family:'Poppins',sans-serif; background:#f4f4f4; color:#222; margin:0; padding:0; }
+    .navbar, footer { background: #000428; }
+    .navbar-brand, .nav-link, footer a { color: #fff!important; }
+    .nav-link.active { font-weight:600; }
+
+    .hero { background: linear-gradient(135deg,#004e92,#000428); color:#fff; text-align:center; padding:120px 20px; position:relative; overflow:hidden;}
+    .hero h1{font-size:2.8rem;font-weight:600;}
+    .hero p{font-size:1.1rem;}
+
+    .team-section, .contact-section { padding:80px 20px; }
+    .section-title { font-size:2rem; font-weight:600; margin-bottom:40px; text-align:center; }
+
+    .team-card { background:#fff; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.05); transition:0.3s; text-align:center; }
+    .team-card:hover { transform:translateY(-6px); box-shadow:0 12px 24px rgba(0,0,0,0.1); }
+    .team-card img { border-radius:50%; width:120px; height:120px; object-fit:cover; margin-bottom:15px; }
+    .team-card h5 { margin-bottom:5px; }
+    .team-card p { font-size:0.9rem; }
+
+    .contact-box { display:block; background:#ffffff10; backdrop-filter:blur(10px); border-radius:12px; padding:30px 20px; text-decoration:none; transition:0.3s; margin:auto; width:100%; max-width:260px;}
+    .contact-box:hover { background:#ffffff20; transform:translateY(-5px); }
+    .contact-box i { display:block; margin-bottom:10px; font-size:2.5rem; }
+
+    .glass-form { background:#ffffff10; backdrop-filter:blur(12px); padding:30px; border-radius:15px; border:1px solid rgba(255,255,255,0.15); box-shadow:0 10px 30px rgba(0,0,0,0.2); margin:auto; max-width:720px; }
+
+    .btn-primary { background:#00c6ff; border:none; }
+    .btn-primary:hover { background:#0072ff; }
+
+    .map-container iframe { width:100%; height:300px; border:0; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); }
+
+    .dark-mode-btn, .scroll-top-btn { position:fixed; right:20px; border-radius:50%; width:46px; height:46px; z-index:999; }
+    .dark-mode-btn { top:20px; }
+    .scroll-top-btn { bottom:20px; display:none; }
+
+    footer { padding:20px 0; text-align:center; font-size:14px; color:#ccc; }
+    footer a { color:#00c6ff; margin:0 6px; text-decoration:none; }
+    footer a:hover { color:#fff; }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">VANSH TECHNOLOGY SERVICES</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="pdfs/java.html" class="nav-link">PDFs</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link active">Team & Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Banner -->
+<section class="hero">
+  <div class="container">
+    <h1>🤝 Meet Our Team & Get In Touch</h1>
+    <p>We’re a skilled team of tech specialists, ready to assist you 24/7.</p>
+  </div>
+</section>
+
+<!-- Founder Spotlight Section -->
+<section class="py-5 bg-light text-center founder-spotlight">
+  <div class="container">
+    <h2 class="section-title">🌟 Meet Our Founder & Visionary</h2>
+    <div class="row justify-content-center align-items-center mt-4">
+      <div class="col-md-4">
+        <img src="../images/CEO images/sample.jpg" alt="Vansh Founder" class="img-fluid rounded-circle shadow-lg" style="width: 200px; height: 200px; object-fit: cover;">
+      </div>
+      <div class="col-md-7 text-start">
+        <h3 class="fw-bold mb-2">Vansh Sharma</h3>
+        <h5 class="text-muted">Founder & CEO — VANSH TECHNOLOGY SERVICES</h5>
+        <p class="mt-3">
+          I'm passionate about empowering students and tech professionals with high-quality resources, futuristic solutions, and out-of-the-box platforms.  
+          With years of experience in <strong>Java Development, Web UI/UX, and MERN Stack</strong>, I started this journey to help others learn and grow smartly.
+        </p>
+        <p><strong>Qualification:</strong> Computer Science Engineering (Polytechnic)</p>
+        <p><strong>Portfolio:</strong> <a href="https://yourportfolio.link" target="_blank">yourportfolio.link</a></p>
+        <p><strong>Email:</strong> vansh@vanshtechnology.com</p>
+        <div class="mt-3">
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="btn btn-outline-primary btn-sm me-2"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://github.com/yourgithub" target="_blank" class="btn btn-outline-dark btn-sm me-2"><i class="fab fa-github"></i> GitHub</a>
+          <a href="mailto:vansh@vanshtechnology.com" class="btn btn-outline-danger btn-sm"><i class="fas fa-envelope"></i> Email</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Team Section -->
+<section class="team-section">
+  <div class="container">
+    <h2 class="section-title">👥 Our Expert Team</h2>
+    <div class="row g-4">
+      <!-- Repeat this block 7 times with actual profile info -->
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Ravi Kumar</h5>
+          <p>5 yrs exp • M.Tech • <a href="#" target="_blank">Portfolio</a></p>
+          <p>ravi@vanshtechnology.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Priya Singh</h5>
+          <p>4 yrs exp • B.Tech • <a href="#" target="_blank">Portfolio</a></p>
+          <p>priya@vanshtechnology.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Vansh Sharma</h5>
+          <p>6 yrs exp • BCA • <a href="#" target="_blank">Portfolio</a></p>
+          <p>vansh@vanshtechnology.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Anjali Verma</h5>
+          <p>3 yrs exp • M.Tech • <a href="#" target="_blank">Portfolio</a></p>
+          <p>anjali@vanshtechnology.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Rahul Yadav</h5>
+          <p>4 yrs exp • B.Tech • <a href="#" target="_blank">Portfolio</a></p>
+          <p>rahul@vanshtechnology.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Neha Gupta</h5>
+          <p>2 yrs exp • BCA • <a href="#" target="_blank">Portfolio</a></p>
+          <p>neha@vanshtechnology.com</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-lg-3">
+        <div class="team-card">
+          <img src="../images/CEO images/sample.jpg" alt="Member Photo">
+          <h5>Amit Jain</h5>
+          <p>5 yrs exp • M.Tech • <a href="#" target="_blank">Portfolio</a></p>
+          <p>amit@vanshtechnology.com</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Support Section -->
+<section id="contact" class="contact-section bg-white">
+  <div class="container text-center text-dark">
+    <h2 class="section-title">📨 Contact & Support</h2>
+    <p class="mb-5">We're here for you 24x7 — talk to our team directly!</p>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-3">
+        <a href="https://wa.me/919876543210" target="_blank" class="contact-box text-success">
+          <i class="fab fa-whatsapp"></i>
+          <h5>WhatsApp</h5><p>Chat with us live</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="https://t.me/vanshtechnologyservice" target="_blank" class="contact-box text-primary">
+          <i class="fab fa-telegram-plane"></i>
+          <h5>Telegram</h5><p>Join channel/group</p>
+        </a>
+      </div>
+      <div class="col-md-3">
+        <a href="mailto:vanshtechnologyservice@gmail.com" class="contact-box text-danger">
+          <i class="fas fa-envelope"></i>
+          <h5>Email</h5><p>vanshtechnologyservice@gmail.com</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="glass-form mt-5">
+      <form onsubmit="handleContactSubmit(event)" class="text-start">
+        <div class="row g-3">
+          <div class="col-md-6"><input type="text" class="form-control" placeholder="Your Name" required></div>
+          <div class="col-md-6"><input type="email" class="form-control" placeholder="Your Email" required></div>
+          <div class="col-12"><textarea class="form-control" rows="4" placeholder="Your Message" required></textarea></div>
+          <div class="col-12 text-center"><button type="submit" class="btn btn-primary px-4">📤 Send Message</button></div>
+        </div>
+        <p id="contactSuccess" class="text-success fw-bold mt-3 d-none text-center">✅ Message sent! We'll get back to you soon.</p>
+      </form>
+    </div>
+
+    <div class="map-container mt-5">
+      <iframe src="https://maps.google.com/maps?q=Kanpur%20Dehat%20UP&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Buttons -->
+<button class="btn btn-secondary dark-mode-btn"><i class="fa-solid fa-moon"></i></button>
+<button class="btn btn-primary scroll-top-btn"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>© 2025 VANSH TECHNOLOGY SERVICES • Forging Tech Futures Together</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a> | <a href="mailto:vanshtechnologyservice@gmail.com">Contact</a></p>
+  </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Dark Mode Toggle
+  const dm = document.querySelector('.dark-mode-btn');
+  dm.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    localStorage.theme = document.body.classList.contains('dark') ? 'dark' : '';
+  });
+  if (localStorage.theme === 'dark') document.body.classList.add('dark');
+
+  // Scroll-to-top
+  const st = document.querySelector('.scroll-top-btn');
+  window.addEventListener('scroll', () => st.style.display = window.scrollY > 400 ? 'block' : 'none');
+  st.addEventListener('click', () => window.scrollTo({ top:0, behavior:'smooth' }));
+
+  // Contact form
+  function handleContactSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contactSuccess').classList.remove('d-none');
+    setTimeout(() => {
+      e.target.reset();
+      document.getElementById('contactSuccess').classList.add('d-none');
+    }, 3000);
+  }
+</script>
+</body>
+</html>

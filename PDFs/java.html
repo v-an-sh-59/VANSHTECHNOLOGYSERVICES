@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Core Java PDFs | VANSH TECHNOLOGY SERVICES</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #eef2f3;
+      color: #222;
+    }
+    .navbar {
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.25rem;
+      letter-spacing: 0.5px;
+    }
+    .hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png');
+      opacity: 0.05;
+      z-index: -1;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+    .filter-bar {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+    .filter-chip {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 30px;
+      margin: 0 6px;
+      cursor: pointer;
+      background: #eee;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+    .filter-chip:hover, .filter-chip.active {
+      background: #007bff;
+      color: white;
+    }
+    .sticky-action {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+  .dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  .dark-mode .pdf-card {
+    background-color: #1e1e1e;
+    color: #ddd;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+  }
+  .dark-toggle {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    z-index: 999;
+  }
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="../index.html"><i class="fas fa-code"></i> VANSH TECHNOLOGY SERVICES</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="../index.html#pdfs" class="nav-link">PDFs</a></li>
+        <li class="nav-item"><a href="../index.html#services" class="nav-link">Services</a></li>
+        <li class="nav-item"><a href="../index.html#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1>☕ Core Java Premium PDFs</h1>
+    <p>All in One: Concepts | Examples | Practice | Interview Prep — curated by <strong>VANSH TECHNOLOGY SERVICES</strong></p>
+  </div>
+</section>
+
+  <div class="container py-4">
+
+    <!-- Breadcrumb + Sticky Search/Filter -->
+    <div class="search-filter">
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb justify-content-center m-0">
+          <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="../index.html#pdfs">PDFs</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Core Java</li>
+        </ol>
+      </nav>
+      <div class="d-flex justify-content-center flex-wrap">
+        <input id="searchInput" type="text" class="form-control me-3 mb-2" style="max-width:360px"
+          placeholder="Search PDFs..." />
+        <select id="filterSelect" class="form-select mb-2" style="max-width:180px;">
+          <option value="All">All Topics</option>
+          <option value="Basics">Basics</option>
+          <option value="OOPs">OOPs</option>
+          <option value="Advanced">Advanced</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- PDF Cards Grid -->
+    <div id="pdfGrid" class="row g-4">
+      <!-- Extendable examples below -->
+      <div class="col-md-4 pdf-item" data-topic="Basics">
+        <div class="pdf-card">
+          <h6>Core Java Basics <span class="badge bg-info badge-topic">Basics</span></h6>
+          <div class="stats">👁️ 231 • ⬇️ 120</div>
+          <div class="pdf-buttons">
+            <button class="btn   btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+              data-url="java/CoreJavaBasics.pdf">📄 Preview</button>
+            <a href="java/CoreJavaBasics.pdf" download class="btn   btn-primary btn-sm">⬇️ Download</a>
+            <a href="https://t.me/share/url?url=https://v-an-sh-59.github.io/VANSHTECHNOLOGYSERVICES/pdfs/java/CoreJavaBasics.pdf"
+              target="_blank" class="btn  btn-outline-success btn-sm share-btn"><i class="fab fa-telegram"></i>Share</a>
+            <a href="https://wa.me/?text=https://v-an-sh-59.github.io/VANSHTECHNOLOGYSERVICES/pdfs/java/CoreJavaBasics.pdf"
+              target="_blank" class="btn  btn-outline-info btn-sm share-btn"><i class="fab fa-whatsapp"></i>Share</a>
+            <button class="btn my-3 mx-3 btn-outline-danger btn-sm share-btn"
+              onclick="alert('Thank you for reporting. We will check this PDF.')">⚠️ Report</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 pdf-item" data-topic="OOPs">
+        <div class="pdf-card">
+          <h6>Java OOPs Concepts <span class="badge bg-warning badge-topic">OOPs</span></h6>
+          <div class="stats">👁️ 175 • ⬇️ 95</div>
+          <div class="pdf-buttons">
+            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+              data-url="java/OOPs.pdf">📄 Preview</button>
+            <a href="java/OOPs.pdf" download class="btn btn-primary btn-sm">⬇️ Download</a>
+            <a href="https://t.me/share/url?url=https://v-an-sh-59.github.io/VANSHTECHNOLOGYSERVICES/pdfs/java/OOPs.pdf"
+              target="_blank" class="btn btn-outline-success btn-sm share-btn"><i class="fab fa-telegram"></i>Share</a>
+            <a href="https://wa.me/?text=https://v-an-sh-59.github.io/VANSHTECHNOLOGYSERVICES/pdfs/java/OOPs.pdf"
+              target="_blank" class="btn btn-outline-info btn-sm share-btn"><i class="fab fa-whatsapp"></i>Share</a>
+            <button class="btn btn-outline-danger btn-sm share-btn"
+              onclick="alert('Thank you for reporting. We will check this PDF.')">⚠️ Report</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 pdf-item" data-topic="Advanced">
+        <div class="pdf-card">
+          <h6>Exception Handling <span class="badge bg-danger badge-topic">Advanced</span></h6>
+          <div class="stats">👁️ 98 • ⬇️ 42</div>
+          <div class="pdf-buttons">
+            <button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#previewModal"
+              data-url="java/ExceptionHandling.pdf">📄 Preview</button>
+            <a href="java/ExceptionHandling.pdf" download class="btn btn-primary btn-sm">⬇️ Download</a>
+            <a href="https://t.me/share/url?url=https://v-an-sh-59.github.io/VANSHTECHNOLOGYSERVICES/pdfs/java/ExceptionHandling.pdf"
+              target="_blank" class="btn btn-outline-success btn-sm share-btn"><i class="fab fa-telegram"></i>Share</a>
+            <a href="https://wa.me/?text=https://v-an-sh-59.github.io/VANSHTECHNOLOGYSERVICES/pdfs/java/ExceptionHandling.pdf"
+              target="_blank" class="btn btn-outline-info btn-sm share-btn"><i class="fab fa-whatsapp"></i>Share</a>
+            <button class="btn btn-outline-danger btn-sm share-btn"
+              onclick="alert('Thank you for reporting. We will check this PDF.')">⚠️ Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Modal Preview -->
+<div class="modal fade" id="previewModal" tabindex="-1">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">PDF Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body"><iframe src="" width="100%" height="600px"></iframe></div>
+    </div>
+  </div>
+</div>
+<script>
+  const modal = document.getElementById('previewModal');
+  modal.addEventListener('show.bs.modal', e => {
+    modal.querySelector('iframe').src = e.relatedTarget.getAttribute('data-url');
+  });
+
+  document.getElementById('searchInput').addEventListener('input', function () {
+    const val = this.value.toLowerCase();
+    document.querySelectorAll('.pdf-item').forEach(item => {
+      item.style.display = item.querySelector('h6').innerText.toLowerCase().includes(val) ? '' : 'none';
+    });
+  });
+
+  document.querySelectorAll('.filter-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      const topic = chip.dataset.topic;
+      document.querySelectorAll('.pdf-item').forEach(item => {
+        item.style.display = topic === 'All' || item.dataset.topic === topic ? '' : 'none';
+      });
+    });
+  });
+</script>
+<button class="btn btn-secondary dark-toggle" onclick="toggleDarkMode()">🌓 Dark Mode</button>
+<button class="btn btn-primary sticky-action" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆️ Top</button>
+<!-- <footer class="mt-5">
+  <div class="container text-center">
+    <p>© 2025 <strong>VANSH TECHNOLOGY SERVICES</strong> — Empowering Education & Freelancing</p>
+    <p>
+      <a href="https://t.me/vanshtechstudy" target="_blank">Telegram</a> |
+      <a href="https://wa.me/919000000000" target="_blank">WhatsApp</a> |
+      <a href="https://github.com/v-an-sh-59" target="_blank">GitHub</a> |
+      <a href="mailto:support@vanshtechnology.in">Email</a>
+    </p>
+  </div>
+</footer> -->
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+  }
+
+  // Load user's preference
+  window.onload = () => {
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  };
+</script>
+<hr class="my-5">
+<div class="bg-light p-4 rounded shadow-sm">
+  <h4 class="mb-3">📬 Can't find a PDF? Request it here!</h4>
+  <form action="https://formspree.io/f/your-id" method="POST">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" name="_replyto" class="form-control" placeholder="Your Email" required>
+      </div>
+      <div class="col-12">
+        <textarea name="message" rows="3" class="form-control" placeholder="Mention Subject/Topic/Title needed..." required></textarea>
+      </div>
+      <div class="col-12 text-end">
+        <button type="submit" class="btn btn-success">📤 Submit Request</button>
+      </div>
+    </div>
+  </form>
+</div>
+<!-- <div class="alert alert-info mt-5">
+  <strong>💡 Want to earn?</strong> Upload your self-made PDFs or notes and get paid per download. <a href="#">Click here to start</a>.
+</div> -->
+<section class="mt-5">
+  <h3 class="text-center mb-4">📈 Most Downloaded PDFs</h3>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">📘 Java Interview Questions</h5>
+          <p class="card-text">Most preferred by job seekers. Includes 100+ Qs.</p>
+        </div>
+        <div class="card-footer text-center">
+          <a href="java/InterviewQs.pdf" target="_blank" class="btn btn-primary btn-sm">Preview</a>
+          <a href="java/InterviewQs.pdf" download class="btn btn-success btn-sm">Download (986)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">📕 Java Basics Summary</h5>
+          <p class="card-text">Perfect for revision before viva/interview.</p>
+        </div>
+        <div class="card-footer text-center">
+          <a href="java/JavaSummary.pdf" target="_blank" class="btn btn-primary btn-sm">Preview</a>
+          <a href="java/JavaSummary.pdf" download class="btn btn-success btn-sm">Download (812)</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">💻 Java Projects Guide</h5>
+          <p class="card-text">Learn project creation with step-by-step guidance.</p>
+        </div>
+        <div class="card-footer text-center">
+          <a href="java/ProjectsGuide.pdf" target="_blank" class="btn btn-primary btn-sm">Preview</a>
+          <a href="java/ProjectsGuide.pdf" download class="btn btn-success btn-sm">Download (657)</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-5">
+  <div class="row text-center">
+    <div class="col-md-3">
+      <div class="p-3 bg-light rounded shadow-sm">
+        <h4 class="text-primary">📄 122+</h4>
+        <p class="mb-0">PDFs Available</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="p-3 bg-light rounded shadow-sm">
+        <h4 class="text-success">📥 22,530+</h4>
+        <p class="mb-0">Total Downloads</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="p-3 bg-light rounded shadow-sm">
+        <h4 class="text-warning">👩‍💻 6,480+</h4>
+        <p class="mb-0">Active Users</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="p-3 bg-light rounded shadow-sm">
+        <h4 class="text-info">⏱️ 12 hrs/day</h4>
+        <p class="mb-0">Avg Site Usage</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="mt-5 py-5 bg-white border-top border-3">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2>📤 Upload Your PDFs</h2>
+      <p class="text-muted">Teachers, Freelancers & Students – Earn by sharing your resources</p>
+    </div>
+
+    <form id="uploadForm" class="row g-3 justify-content-center" enctype="multipart/form-data">
+      <div class="col-md-5">
+        <input type="text" class="form-control" placeholder="Your Name" required>
+      </div>
+      <div class="col-md-5">
+        <input type="email" class="form-control" placeholder="Email Address" required>
+      </div>
+      <div class="col-md-5">
+        <input type="text" class="form-control" placeholder="PDF Title" required>
+      </div>
+      <div class="col-md-5">
+        <select class="form-select" required>
+          <option selected disabled>Choose Category</option>
+          <option value="Core Java">Core Java</option>
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+
+          <option value="DSA">DSA</option>
+          <option value="Interview Qs">Interview Qs</option>
+        </select>
+      </div>
+      <div class="col-md-10">
+        <input type="file" class="form-control" accept=".pdf" required>
+      </div>
+      <div class="col-md-6 text-center">
+        <button type="submit" class="btn btn-success px-4">📤Click to Upload </button>
+      </div>
+    </form>
+
+    <p class="mt-4 text-center text-muted" style="font-size: 0.9rem;">
+      ✅ Once reviewed, your PDF will appear in the public list and you'll start earning ₹ per download.
+    </p>
+  </div>
+</section>
+<!-- <div class="d-flex justify-content-between align-items-center mt-3">
+  <div class="rating text-warning">
+    ⭐⭐⭐⭐☆ (4.2)
+  </div>
+  <button class="btn btn-sm btn-outline-danger favorite-btn">❤️ Save</button>
+</div>
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center mb-4">💰 Your Earnings Dashboard</h3>
+
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="bg-white p-4 rounded shadow-sm">
+          <p><strong>Total Downloads:</strong> 178</p>
+          <p><strong>Earning per Download:</strong> ₹2.00</p>
+          <p><strong>Total Earnings:</strong> ₹356.00</p>
+
+          <label class="form-label mt-3">Progress to ₹1000 Goal</label>
+          <div class="progress mb-2">
+            <div class="progress-bar bg-success" style="width: 35%">35%</div>
+          </div>
+
+          <button class="btn btn-success w-100">📤 Request Payout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- Review Modal -->
+<!-- <div class="modal fade" id="reviewModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form>
+        <div class="modal-header"><h5 class="modal-title">Rate This PDF</h5></div>
+        <div class="modal-body">
+          <label class="form-label">Select Rating</label>
+          <select class="form-select">
+            <option>⭐ 1 - Poor</option>
+            <option>⭐⭐ 2 - Fair</option>
+            <option>⭐⭐⭐ 3 - Good</option>
+            <option>⭐⭐⭐⭐ 4 - Very Good</option>
+            <option>⭐⭐⭐⭐⭐ 5 - Excellent</option>
+          </select>
+          <label class="form-label mt-3">Feedback (optional)</label>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">✅ Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-center text-md-start">
+    <div class="row text-center text-md-start">
+
+      <!-- Company Info -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">VANSH TECHNOLOGY SERVICES</h5>
+        <p>Empowering Students, Freelancers & Educators with Resources, Tools, and Real Earnings Opportunities in Tech & Education Domain.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Quick Links</h5>
+        <p><a href="../index.html" class="text-white text-decoration-none">Home</a></p>
+        <p><a href="../index.html#services" class="text-white text-decoration-none">Services</a></p>
+        <p><a href="../index.html#pdfs" class="text-white text-decoration-none">PDFs</a></p>
+        <p><a href="../index.html#contact" class="text-white text-decoration-none">Contact</a></p>
+      </div>
+
+      <!-- Student Services -->
+      <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">For Students</h5>
+        <p><a href="#" class="text-white text-decoration-none">Polytechnic Resources</a></p>
+        <p><a href="#" class="text-white text-decoration-none">B.Tech / BCA PDFs</a></p>
+        <p><a href="#" class="text-white text-decoration-none">DSA & Interview Prep</a></p>
+        <p><a href="#" class="text-white text-decoration-none">Make Resume & PPT</a></p>
+      </div>
+
+      <!-- Connect & Social -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+        <h5 class="text-uppercase mb-4 font-weight-bold text-info">Connect</h5>
+        <p><i class="bi bi-envelope-fill"></i> support@vanshtechnology.com</p>
+        <p><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
+        <div>
+          <a href="https://t.me/vanshtechstudy" target="_blank" class="text-white me-3"><i class="bi bi-telegram"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank" class="text-white me-3"><i class="bi bi-whatsapp"></i></a>
+          <a href="#" target="_blank" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+          <a href="#" target="_blank" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="my-3"/>
+
+    <div class="row align-items-center">
+      <div class="col-md-7 col-lg-8">
+        <p>© 2025 <strong class="text-info">VANSH TECHNOLOGY SERVICES</strong> | All rights reserved.</p>
+      </div>
+      <div class="col-md-5 col-lg-4 text-end">
+        <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        |
+        <a href="#" class="text-white text-decoration-none">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body></html>
